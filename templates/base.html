@@ -17,9 +17,15 @@
       crossorigin="anonymous"
     />
 
-    <title>Birch Wedding</title>
+    <title>{% block title %} {% endblock %}</title>
     <style></style>
     <link href="../static/css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -33,17 +39,7 @@
         </div>
       </header>
 
-      <main role="main" class="inner cover">
-        <div class="fade-in-text">
-          <h1 class="cover-heading">Birch Wedding</h1>
-          <h2 class="cover-heading">06/05/24</h2>
-
-          <p class="lead">47.6120° N, 122.3418° W</p>
-          <p class="lead">
-            <a href="#" class="btn btn-md btn-secondary">More Info To Come</a>
-          </p>
-        </div>
-      </main>
+      {% block content %} {% endblock %}
 
       <footer class="mastfoot mt-auto"></footer>
     </div>

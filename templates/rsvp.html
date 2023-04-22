@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} {% endblock %}</h1>
+{% block body %}
+<div class="fade-in-text">
+  <h2 class="cover-heading">Please, let us know if you're coming</h2>
+  <br />
+  <form action="{{ url_for('rsvp') }}" method="post">
+    {{ form.hidden_tag() }} {{ form.name.label }} {{ form.name }} {{
+    form.email.label }} {{ form.email }} {{ form.message.label }} {{
+    form.message }} <br />
+    {{ form.submit }}
+  </form>
+  <br /><br />
+  <p class="lead">
+    <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">home</a>
+  </p>
+</div>
+{% endblock %} {% endblock %}
