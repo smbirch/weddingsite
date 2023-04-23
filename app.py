@@ -1,6 +1,6 @@
 import config
 
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, redirect, flash
 from forms import ContactForm
 from flask_mail import Mail, Message
 
@@ -42,7 +42,7 @@ def rsvp():
                 form.message.data,
             )
             mail.send(msg)
-            return render_template("rsvp.html", success=True)
+            return redirect("thanks")
     elif request.method == "GET":
         return render_template("rsvp.html", form=form)
 
@@ -50,3 +50,8 @@ def rsvp():
 @app.route("/info")
 def info():
     return render_template("info.html")
+
+
+@app.route("/thanks")
+def thanks():
+    return render_template("thanks.html")
