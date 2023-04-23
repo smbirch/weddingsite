@@ -32,9 +32,9 @@ def rsvp():
             return render_template("rsvp.html", form=form)
         else:
             msg = Message(
-                subject=f"RSVP from {form.email.data}",
+                subject=f"RSVP from {form.email.data}: {form.rsvp.data}",
                 recipients=["birchwedding@outlook.com"],
-                body=f"RSVP from: {form.name.data}\n{form.email.data}",
+                body=f"From: {form.name.data}\nEmail: {form.email.data}\nRSVP: {form.rsvp.data}",
                 sender="birchwedding@outlook.com",
             )
 
