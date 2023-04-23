@@ -32,15 +32,12 @@ def rsvp():
             return render_template("rsvp.html", form=form)
         else:
             msg = Message(
-                form.subject.data,
-                sender="birchwedding@outlook.com",
+                subject=f"RSVP from {form.email.data}",
                 recipients=["birchwedding@outlook.com"],
+                body=f"RSVP from: {form.name.data}\n{form.email.data}",
+                sender="birchwedding@outlook.com",
             )
-            msg.body = """From: %s <%s>%s""" % (
-                form.name.data,
-                form.email.data,
-                form.message.data,
-            )
+
             mail.send(msg)
             return redirect("thanks")
     elif request.method == "GET":

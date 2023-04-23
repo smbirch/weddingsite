@@ -12,23 +12,15 @@
   {% for message in form.email.errors %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
-  {% for message in form.subject.errors %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% for message in form.message.errors %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
+
   <form action="{{ url_for('rsvp') }}" method=post>
     {{ form.hidden_tag() }}
     {{ form.name.label }}
     {{ form.name }}
     {{ form.email.label }}
     {{ form.email }}
-    {{ form.subject.label }}
-    {{ form.subject }}
-    {{ form.message.label }}
-    {{ form.message }}
-    <br>
+    
+    <br><br>
     {{ form.submit }}
 
   </form>
@@ -36,7 +28,7 @@
 {% endif %}
 
   </form>
-  <br /><br />
+  <br />
   <div class="btn">
     <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">home</a>
 </div>
