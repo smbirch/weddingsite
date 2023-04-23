@@ -28,6 +28,7 @@
     {{ form.subject }}
     {{ form.message.label }}
     {{ form.message }}
+    <br>
     {{ form.submit }}
 
   </form>
@@ -36,8 +37,8 @@
 
   </form>
   <br /><br />
-  <p class="lead">
+  <div class="btn">
     <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">home</a>
-  </p>
+</div>
 </div>
 {% endblock %} {% endblock %}
