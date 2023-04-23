@@ -8,8 +8,6 @@ class ContactForm(FlaskForm):
 
     email = StringField("Email")
 
-    subject = StringField("Subject")
-
     message = TextAreaField("Message")
 
     submit = SubmitField("Send")

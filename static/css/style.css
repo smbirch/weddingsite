@@ -159,7 +159,7 @@ form input#subject {
 
   width: 400px;
 
-  background-color: #fafafa;
+  background-color: #fafafaa9;
 
   -webkit-border-radius: 3px;
 
@@ -177,11 +177,11 @@ form input#subject {
 
 form textarea#message {
 
-  width: 500px;
+  width: 400px;
 
   height: 100px;
 
-  background-color: #fafafa;
+  background-color: #fafafaa9;
 
   -webkit-border-radius: 3px;
 
@@ -209,7 +209,7 @@ form input#submit {
 
           border-radius: 3px;
 
-  border:1px solid #d8d8d8;
+  border:1px solid #f4efb9ba;
 
   padding: 10px; 
 
@@ -217,21 +217,10 @@ form input#submit {
 
   text-align: center; 
 
-  color: #000000; 
+  color: #000000ba; 
 
-  background-color: #f4f4f4;
+  background-color: #f4efb9ba;
 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
-
-  background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
-
-  background-image: -moz-linear-gradient(top, #f4f4f4, #e5e5e5);
-
-  background-image: -ms-linear-gradient(top, #f4f4f4, #e5e5e5);
-
-  background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
-
-  background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
 
 }
 
