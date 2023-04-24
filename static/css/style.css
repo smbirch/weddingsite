@@ -167,7 +167,9 @@ div.inner {
 .fade-in-text {
   animation: fadeIn 5s;
   pointer-events: auto;
-  padding-top: 1rem;
+  padding: 1rem;
+  display: block;
+  margin: 0.5rem;
 }
 
 .cover-heading {
