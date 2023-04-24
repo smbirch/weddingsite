@@ -15,7 +15,8 @@ ul {
 }
 
 li {
-  margin: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 a {
@@ -205,7 +206,7 @@ div.inner {
 }
 
 .rsvp {
-  padding: 0.75rem;
+  padding: 0rem;
   display: block;
 }
 
