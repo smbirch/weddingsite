@@ -1,2 +1,2 @@
-email_password = "557L2.POs?!?"
+email_password = "swnUK2X3sksGXLH"
 app_secret_key = "weddingsecretkey"

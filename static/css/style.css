@@ -193,7 +193,7 @@ form input#submit {
 
   border-radius: 3px;
 
-  border: 1px solid #f4efb9ba;
+  border: 0.05rem solid #393939;
 
   margin: 5px;
 
@@ -206,6 +206,8 @@ form input#submit {
   color: #000000ba;
 
   background-color: #f4efb9ba;
+
+  border: 0.05rem solid #393939;
 }
 
 form input#submit:hover {
