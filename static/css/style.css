@@ -244,7 +244,7 @@ form input#email {
 }
 
 form textarea#message {
-  width: 400px;
+  width: 75%;
 
   height: 100px;
 
