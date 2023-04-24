@@ -2,7 +2,7 @@
 <h1>{% block title %} {% endblock %}</h1>
 {% block body %}
 <div class="fade-in-text">
-  <h2 class="cover-heading">RSVP by February, 2024</h2>
+  <h2 class="cover-heading">Please let us know you are coming by February</h2>
   {% if success %}
   {{redirect(url_for("thanks"))}}
 {% else %}
@@ -30,8 +30,8 @@
 
   </form>
   <br />
-  <div class="btn">
-    <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">home</a>
+  <div class="lead">
+    <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">Home</a>
 </div>
 </div>
 {% endblock %} {% endblock %}
