@@ -2,7 +2,10 @@
 <h1>{% block title %} {% endblock %}</h1>
 {% block body %}
 <div class="fade-in-text">
-  <h2 class="cover-heading">Please let us know you are coming by February</h2>
+  <div class="toptext">
+  <h2 class="cover-heading">Please let us know you are coming by February, 2024</h2>
+</div>
+
   {% if success %}
   {{redirect(url_for("thanks"))}}
 {% else %}
@@ -20,18 +23,19 @@
     {{ form.email.label }}
     {{ form.email }}
     <div class="rsvp">{{ form.rsvp.label }}
-    {{ form.rsvp }}</div>
+    {{ form.rsvp }}
     
-    {{ form.submit }}
+    <div>
+    {{ form.submit(class_="btn btn-md btn-secondary") }}
+    <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">Home</a>
+  </div></div>
+
 
   </form>
 
 {% endif %}
 
   </form>
-  <br />
-  <div class="lead">
-    <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">Home</a>
 </div>
-</div>
+
 {% endblock %} {% endblock %}

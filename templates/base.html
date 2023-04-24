@@ -22,24 +22,22 @@
     />
 
     <link href="../static/css/style.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    
   </head>
+
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto fade-in-text">
-        <div class="inner">
-          <nav class="nav nav-masthead justify-content-center"></nav>
-        </div>
-      </header>
+      
+      <header class="mb-auto justify-content-center "></header>
 
-      {% block content %} {% endblock %}
+        <main role="main" class="deco">
 
-      <footer class="mastfoot mt-auto"></footer>
+        {% block content %} {% endblock %}
+
+      </main>
+
+        <footer class="mastfoot mt-auto"></footer>
+      </div>
     </div>
 
     <script
@@ -49,3 +47,5 @@
     ></script>
   </body>
 </html>
+
+

@@ -1,16 +1,15 @@
 {% extends 'base.html' %} {% block content %}
-<main role="main" class="inner cover">
-  <div class="fade-in-text">
-    <h1 class="cover-heading">Birch Wedding</h1>
-    <h2 class="cover-heading">06/05/24</h2>
+<div class="fade-in-text">
+  <h1 class="cover-heading">BIRCH WEDDING</h1>
+  <h2 class="cover-heading">06.05.2024</h2>
 
-    <p class="lead">47.6120° N, 122.3418° W</p>
-    <p class="lead">
-      <a href="{{ url_for('rsvp')}}" class="btn btn-md btn-secondary">RSVP</a>
-      <a href="{{ url_for('info')}}" class="btn btn-md btn-secondary"
-        >More Info</a
-      >
-    </p>
-  </div>
-</main>
+  <p class="lead">47.6120° N, 122.3418° W</p>
+  <p class="lead">
+    <a href="{{ url_for('rsvp')}}" class="btn btn-md btn-secondary">RSVP</a>
+    <a href="{{ url_for('info')}}" class="btn btn-md btn-secondary"
+      >More Info</a
+    >
+  </p>
+</div>
+
 {% endblock %}

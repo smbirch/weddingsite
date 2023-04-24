@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "Delauney";
+  src: url("Delauney.ttf") format("truetype");
+}
+
 ul {
   list-style-type: none;
   display: inline-flex;
-  padding: 0.5em;
+  padding: 0rem;
 }
 
 li {
@@ -19,18 +24,24 @@ a:hover {
 }
 
 h1 {
-  font-family: "Poiret One";
+  font-family: "Delauney";
   font-size: 3em;
 }
 
 h2 {
-  font-family: "Poiret One";
+  font-family: "Delauney";
   font-size: 2em;
 }
 
 h3 {
-  font-family: "Poiret One";
+  font-family: "Delauney";
   font-size: 1em;
+}
+
+.toptext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Custom default button */
@@ -82,26 +93,84 @@ html,
 body {
   height: 100%;
   background: radial-gradient(circle, #001705e8, #000000);
-  font-family: "Poiret One";
+  font-family: "Delauney";
   font-weight: normal;
 }
 
 body {
   display: -ms-flexbox;
   display: flex;
-  font-family: "Poiret One";
+  font-family: "Delauney";
   font-weight: normal;
   color: #f4efb9ba;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5rem rgba(6, 18, 0, 0.5);
 }
 
+div.inner {
+  display: flex;
+  /* width: 80%;
+  height: 70%; */
+  padding: 0.5rem;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+
+  position: relative;
+  z-index: -1;
+}
+
+.deco {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+  border: 2px solid;
+  position: relative;
+
+  animation: fadeIn 3s;
+  pointer-events: none;
+  padding-top: 14rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.deco:before,
+.deco:after {
+  border: 1px solid;
+}
+
+.deco:before,
+.deco:after {
+  content: "";
+  position: absolute;
+}
+
+.deco:before {
+  top: -5px;
+  right: 2px;
+  bottom: -5px;
+  left: 2px;
+}
+
+.deco:after {
+  top: 2px;
+  right: -5px;
+  bottom: 2px;
+  left: -5px;
+}
+
 .fade-in-text {
-  animation: fadeIn 6s;
+  animation: fadeIn 5s;
+  pointer-events: auto;
 }
 
 .cover-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 42em;
+  pointer-events: auto;
 }
 
 @keyframes fadeIn {
@@ -186,28 +255,6 @@ form textarea#message {
 
 form input#submit {
   display: inline-flex;
-
-  -webkit-border-radius: 3px;
-
-  -moz-border-radius: 3px;
-
-  border-radius: 3px;
-
-  border: 0.05rem solid #393939;
-
-  margin: 5px;
-
-  padding: 10px;
-
-  font-weight: normal;
-
-  text-align: center;
-
-  color: #000000ba;
-
-  background-color: #f4efb9ba;
-
-  border: 0.05rem solid #393939;
 }
 
 form input#submit:hover {
