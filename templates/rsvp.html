@@ -1,41 +1,43 @@
 {% extends 'base.html' %} {% block content %}
-<h1>{% block title %} {% endblock %}</h1>
-{% block body %}
-<div class="fade-in-text">
-  <div class="toptext">
-  <h2 class="cover-heading">Please let us know if you are coming by February, 2024</h2>
-</div>
 
-  {% if success %}
-  {{redirect(url_for("thanks"))}}
-{% else %}
-  {% for message in form.name.errors %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% for message in form.email.errors %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
+  <div class="row toptext">
+    <div class="col-12 padhelp">
+      <h2>Please let us know if you are coming by February, 2024</h2>
+    </div>
 
-  <form action="{{ url_for('rsvp') }}" method=post>
-    {{ form.hidden_tag() }}
-    {{ form.name.label }}
-    {{ form.name }}
-    {{ form.email.label }}
-    {{ form.email }}
-    <div class="rsvp">{{ form.rsvp.label }}
-    {{ form.rsvp }}
-    
-    <div>
-    {{ form.submit(class_="btn btn-md btn-secondary") }}
-    <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">Home</a>
-  </div></div>
+      {% if success %}
+        {{redirect(url_for("thanks"))}}
+      {% else %}
+        {% for message in form.name.errors %}
+          <div class="flash">{{ message }}</div>
+        {% endfor %}
 
+        {% for message in form.email.errors %}
+          <div class="flash">{{ message }}</div>
+        {% endfor %}
 
-  </form>
+        <div class="col-12 formflex">
+          <form action="{{ url_for('rsvp') }}" method=post>
+            {{ form.hidden_tag() }}
+            {{ form.name.label }}
+            {{ form.name }}
+            {{ form.email.label }}
+            {{ form.email }}
+            {{ form.rsvp.label }}
+            {{ form.rsvp }}
+            
+            <div class="col-12">
+              {{ form.submit(class_="btn") }}
+              <a class="btn" href="{{ url_for('index')}}" role="button">Home</a>
+            </div>
+          </form>
+      </form>
 
-{% endif %}
+        {% endif %}
 
-  </form>
-</div>
+        </div>
 
-{% endblock %} {% endblock %}
+    </div>
+  </div>
+
+{% endblock %} 

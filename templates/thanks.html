@@ -1,12 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-<h1>{% block title %} {% endblock %}</h1>
-{% block body %}
-<div class="fade-in-text">
+
+<div class="row toptext">
   <h2 class="cover-heading">Thank you for letting us know!</h2>
 
-  <p>We will reach out to you with more information soon!</p>
+  <p>We will reach out to you with more information soon</p>
   <p class="lead">
     <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">home</a>
   </p>
 </div>
-{% endblock %} {% endblock %}
+{% endblock %}

@@ -1,30 +1,29 @@
 {% extends 'base.html' %} {% block content %}
-<h1>{% block title %} {% endblock %}</h1>
-{% block body %}
-<div class="fade-in-text">
-  <h2 class="cover-heading">06/05/24</h2>
-  <h3>
-    As we prepare for our special day, we wanted to share with you some
-    important details about our wedding. While we love and appreciate all the
-    children in our lives, we have decided to make our wedding an adults-only
-    celebration.<br /><br />
-    Additionally, while we would love to extend an invitation to everyone's
-    significant other, we have decided to limit our guest list to close friends
-    and family only.
 
-    <p>
+<div class="row toptext">
+  <div class="col-12">
+    <h2>06/05/24</h2>
+    <div class="col-12">
+      <h3>
+        As we prepare for our special day, we wanted to share with you some
+        important details about our wedding. While we love and appreciate all
+        the children in our lives, we have decided to make our wedding an
+        adults-only celebration.<br /><br />
+        Additionally, while we would love to extend an invitation to everyone's
+        significant other, we have decided to limit our guest list to close
+        friends and family only.
+      </h3>
+      <div class="col-12">
+        <a
+          href="https://www.google.com/maps/d/u/1/edit?mid=1YS2KV5cWyB8u7_3pFHJHwusCsz96aVk&usp=sharing"
+          target="_blank"
+          >Click here to see a map to the venue, as well as nearby
+          accommodations.</a
+        >
+      </div>
       <br />
-      <a
-        href="https://www.google.com/maps/d/u/1/edit?mid=1YS2KV5cWyB8u7_3pFHJHwusCsz96aVk&usp=sharing"
-        target="_blank"
-        >Click here to see a map to the venue, as well as nearby
-        accommodations.</a
-      >
-    </p>
-  </h3>
-  <br />
-  <p class="lead">
-    <a href="{{ url_for('index')}}" class="btn btn-md btn-secondary">Home</a>
-  </p>
+      <a class="btn" href="{{ url_for('index')}}" role="button">Home</a>
+    </div>
+  </div>
 </div>
-{% endblock %} {% endblock %}
+{% endblock %}

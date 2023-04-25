@@ -1,15 +1,19 @@
 {% extends 'base.html' %} {% block content %}
-<div class="fade-in-text">
-  <h1 class="cover-heading">BIRCH WEDDING</h1>
-  <h2 class="cover-heading">06.05.2024</h2>
 
-  <p class="lead">47.6120° N, 122.3418° W</p>
-  <p class="lead">
-    <a href="{{ url_for('rsvp')}}" class="btn btn-md btn-secondary">RSVP</a>
-    <a href="{{ url_for('info')}}" class="btn btn-md btn-secondary"
-      >More Info</a
-    >
-  </p>
+<div class="row toptext">
+  <div class="col-12">
+    <h1>BIRCH WEDDING</h1>
+  </div>
+  <div class="col-12">
+    <h2>06.05.2024</h2>
+  </div>
+  <div class="col-12">
+    <h3>47.6120° N, 122.3418° W</h3>
+  </div>
+  <div class="col-4">
+    <a class="btn" href="{{ url_for('rsvp')}}" role="button"><p>RSVP</p></a>
+    <a class="btn" href="{{ url_for('info')}}" role="button">More Info</a>
+  </div>
 </div>
 
 {% endblock %}
