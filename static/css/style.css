@@ -325,6 +325,10 @@ form input#submit:hover {
   width: 400px;
 }
 
+col-4 {
+  align-items: center;
+}
+
 @media (max-width: 450px) {
   h2 {
     font-size: 5vw;
@@ -336,5 +340,10 @@ form input#submit:hover {
 
   a {
     font-size: 3vw;
+  }
+
+  col-4 {
+    flex-wrap: nowrap;
+    padding-right: 3em;
   }
 }
