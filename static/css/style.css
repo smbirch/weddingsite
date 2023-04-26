@@ -61,7 +61,10 @@ h3 {
   height: 50px;
   margin: 0.5em;
   font-size: 0.9em;
-  z-index: 9999 !important;
+}
+
+.btnpad {
+  padding-top: 1em !important;
 }
 
 .btn-secondary:hover {
@@ -323,6 +326,21 @@ form input#submit:hover {
   padding: 10px;
 
   width: 400px;
+}
+
+input[type="radio"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #e7e6e7;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 3px;
+}
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  background-color: #001705;
 }
 
 col-4 {
