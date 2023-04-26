@@ -40,6 +40,7 @@ h3 {
 }
 
 .toptext {
+  display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -258,6 +259,7 @@ form input#email {
 
 .padhelp {
   padding-top: 1em;
+  display: flex;
 }
 
 form textarea#message {
@@ -321,4 +323,18 @@ form input#submit:hover {
   padding: 10px;
 
   width: 400px;
+}
+
+@media (max-width: 450px) {
+  h2 {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+
+  a {
+    font-size: 3vw;
+  }
 }
