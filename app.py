@@ -1,20 +1,22 @@
 import config
+import os
 
 from flask import Flask, render_template, request, redirect, flash
 from forms import ContactForm
 from flask_mail import Mail, Message
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 app.secret_key = config.app_secret_key
 
-
+load_dotenv()
 mail = Mail()
 app.config["MAIL_SERVER"] = "smtp.office365.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
 app.config["MAIL_USERNAME"] = "birchwedding@outlook.com"
-app.config["MAIL_PASSWORD"] = config.email_password
+app.config["MAIL_PASSWORD"] = os.getenv("email_password")
 mail.init_app(app)
 
 
