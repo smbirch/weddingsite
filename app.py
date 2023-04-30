@@ -16,7 +16,7 @@ app.config["MAIL_SERVER"] = "smtp.office365.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
-app.config["MAIL_USERNAME"] = "mail_account"
+app.config["MAIL_USERNAME"] = os.getenv("mail_account")
 app.config["MAIL_PASSWORD"] = os.getenv("email_password")
 mail.init_app(app)
 
