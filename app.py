@@ -6,16 +6,18 @@ from forms import ContactForm
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 
-app = Flask(__name__)
-app.secret_key = config.app_secret_key
-
 load_dotenv()
+
+
+app = Flask(__name__)
+app.secret_key = os.getenv("app_secret_key")
+
 mail = Mail()
 app.config["MAIL_SERVER"] = "smtp.office365.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
-app.config["MAIL_USERNAME"] = "birchwedding@outlook.com"
+app.config["MAIL_USERNAME"] = "mail_account"
 app.config["MAIL_PASSWORD"] = os.getenv("email_password")
 mail.init_app(app)
 
