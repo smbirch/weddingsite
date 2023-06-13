@@ -14,6 +14,16 @@ li {
   margin-right: 0.5em;
 }
 
+.gallery-photo {
+  width: 100%;
+  height: auto;
+}
+
+.deco-gallery {
+  height: 100%; /* Set the desired height for the scrolling container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
 a {
   color: #f4efb9ba;
   text-decoration: none;

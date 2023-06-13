@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<div class="row justify-content-center deco-gallery">
+  <div class="col-md-12">
+    <div class="deco-gallery">
+      <div class="row">
+        {% for i in random_photos %}
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img
+            src="{{ url_for('static', filename='images/image' ~ i ~ '.jpg') }}"
+            class="img-fluid gallery-photo"
+            alt="Photo {{ i }}"
+          />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

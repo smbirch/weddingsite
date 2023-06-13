@@ -4,6 +4,8 @@ from flask import Flask, render_template, request, redirect, flash
 from forms import ContactForm
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
+import random
+
 
 load_dotenv()
 
@@ -55,3 +57,19 @@ def info():
 @app.route("/thanks")
 def thanks():
     return render_template("thanks.html")
+
+
+@app.route("/gallery")
+def gallery():
+    photo_dir = os.path.dirname("static/images")
+    photo_count = len(
+        [
+            name
+            for name in os.listdir(photo_dir)
+            if os.path.isfile(os.path.join(photo_dir, name))
+        ]
+    )
+
+    random_photos = random.sample(range(1, 114), 12)
+
+    return render_template("gallery.html", random_photos=random_photos)
