@@ -33,6 +33,11 @@ li {
   transform: translateX(-50%);
 }
 
+.thanks {
+  justify-content: center;
+  align-items: center;
+}
+
 a {
   color: #f4efb9ba;
   text-decoration: none;
@@ -73,6 +78,10 @@ h3 {
 
 .toppad {
   padding-top: .5rem;
+}
+
+.toppadmore {
+  padding-top: .7rem;
 }
 
 /* Custom default button */
@@ -389,5 +398,11 @@ col-4 {
 }
 
 .row {
+  justify-content: center;
+}
+
+
+.lead {
+  display: flex;
   justify-content: center;
 }
