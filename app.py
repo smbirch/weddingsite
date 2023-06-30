@@ -64,6 +64,11 @@ def thanks():
     return render_template("thanks.html")
 
 
+@app.route("/livestream")
+def livestream():
+    return render_template("livestream.html")
+
+
 @app.route("/gallery")
 def gallery():
     photo_dir = os.path.dirname("static/images")
