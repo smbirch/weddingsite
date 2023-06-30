@@ -80,6 +80,6 @@ def gallery():
         ]
     )
 
-    random_photos = random.sample(range(1, 114), 32)
+    random_photos = random.sample(range(1, 114), 16)
 
     return render_template("gallery.html", random_photos=random_photos)
