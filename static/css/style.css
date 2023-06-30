@@ -397,6 +397,12 @@ col-4 {
   }
 }
 
+@media (max-height: 700px) {
+  .bottompad {
+    margin-bottom: .8em;
+  }
+}
+
 .row {
   justify-content: center;
 }
