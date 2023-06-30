@@ -44,7 +44,12 @@ def rsvp():
             )
 
             mail.send(msg)
-            return redirect("thanks")
+            if form.rsvp.data == "No":
+                return redirect("livestream")
+
+            else:
+                return redirect("thanks")
+
     elif request.method == "GET":
         return render_template("rsvp.html", form=form)
 
@@ -70,6 +75,6 @@ def gallery():
         ]
     )
 
-    random_photos = random.sample(range(1, 114), 12)
+    random_photos = random.sample(range(1, 114), 32)
 
     return render_template("gallery.html", random_photos=random_photos)
