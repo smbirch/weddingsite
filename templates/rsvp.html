@@ -4,41 +4,43 @@
     <div class="col-12 padhelp">
       <h2>Please let us know if you are coming by February, 2024</h2>
     </div>
+    {% if success %}
+      {{redirect(url_for("thanks"))}}
+    {% else %}
+      {% for message in form.name.errors %}
+        <div class="flash">{{ message }}</div>
+      {% endfor %}
 
-      {% if success %}
-        {{redirect(url_for("thanks"))}}
-      {% else %}
-        {% for message in form.name.errors %}
-          <div class="flash">{{ message }}</div>
-        {% endfor %}
+      {% for message in form.email.errors %}
+        <div class="flash">{{ message }}</div>
+      {% endfor %}
 
-        {% for message in form.email.errors %}
-          <div class="flash">{{ message }}</div>
-        {% endfor %}
-
-        <div class="col-12 formflex">
-          <form action="{{ url_for('rsvp') }}" method=post>
-            {{ form.hidden_tag() }}
-            {{ form.name.label }}
-            {{ form.name }}
-            {{ form.email.label }}
-            {{ form.email }}
-            {{ form.rsvp.label }}
-            {{ form.rsvp }}
-            
-            <div class="col-12">
-              {{ form.submit(class_="btn") }}
-              <a class="btn btnpad" href="{{ url_for('index')}}" role="button">Home</a>
-            </div>
-          </form>
-      </form>
-
-        {% endif %}
-
-        </div>
-
+      <div class="col-12 formflex">
+        <form action="{{ url_for('rsvp') }}" method=post>
+          {{ form.hidden_tag() }}
+          {{ form.name.label }}
+          {{ form.name }}
+          {{ form.email.label }}
+          {{ form.email }}
+          {{ form.rsvp.label }}
+          {{ form.rsvp }}
+          
+          <div class="col-12">
+            {{ form.submit(class_="btn") }}
+            <a class="btn btnpad" href="{{ url_for('index')}}" role="button">Home</a>
+          </div>
+        </form>
+      </div>
+    {% endif %}
+    <div class="row">
+      <h3 class="extrapadtop">There will be a livestream available if you are unable to attend</h3>
+      
     </div>
+      
   </div>
+  
+  
+
 
 {% endblock %} 
 

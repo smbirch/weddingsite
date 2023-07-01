@@ -392,9 +392,12 @@ col-4 {
   }
 
   .btn {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    
   }
+}
+
+.extrapadtop {
+  padding-top: 1rem;
 }
 
 @media (max-height: 700px) {
