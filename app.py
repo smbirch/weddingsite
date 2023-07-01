@@ -11,8 +11,7 @@ load_dotenv()
 
 
 app = Flask(__name__)
-# app.secret_key = os.getenv("app_secret_key")
-app.secret_key = "secret_key"
+app.secret_key = os.getenv("app_secret_key")
 
 
 mail = Mail()
