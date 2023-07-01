@@ -404,7 +404,14 @@ col-4 {
   .bottompad {
     margin-bottom: .8em;
   }
+
+  .extrapadtop {
+    padding-top: 0rem;
+  }
+
 }
+
+
 
 .row {
   justify-content: center;
