@@ -391,9 +391,11 @@ col-4 {
     padding-right: 3em;
   }
 
-  .btn {
-    
+  .subtitle {
+    font-size: 5vw !important;
   }
+
+
 }
 
 .extrapadtop {
@@ -409,6 +411,10 @@ col-4 {
     padding-top: 0rem;
   }
 
+  .subtitle {
+    font-size: 5vw !important;
+  }
+
 }
 
 
@@ -422,3 +428,4 @@ col-4 {
   display: flex;
   justify-content: center;
 }
+
