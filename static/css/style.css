@@ -14,6 +14,10 @@ li {
   margin-right: 0.5em;
 }
 
+.bottombar {
+  position: relative;
+}
+
 .gallery-photo {
   width: 100%;
   height: auto;
@@ -26,9 +30,20 @@ li {
   scrollbar-color: transparent transparent;
 }
 
+.leftpad {
+  padding-left: 0.5em;
+}
+
 .buttonhome {
   position: fixed;
-  left: 50%;
+  left: 40%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+
+.buttonhomeright {
+  position: fixed;
+  right: 40%;
   bottom: 10px;
   transform: translateX(-50%);
 }
@@ -77,11 +92,11 @@ h3 {
 }
 
 .toppad {
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 
 .toppadmore {
-  padding-top: .7rem;
+  padding-top: 0.7rem;
 }
 
 /* Custom default button */
@@ -394,8 +409,6 @@ col-4 {
   .subtitle {
     font-size: 5vw !important;
   }
-
-
 }
 
 .extrapadtop {
@@ -404,7 +417,7 @@ col-4 {
 
 @media (max-height: 700px) {
   .bottompad {
-    margin-bottom: .8em;
+    margin-bottom: 0.8em;
   }
 
   .extrapadtop {
@@ -414,18 +427,13 @@ col-4 {
   .subtitle {
     font-size: 5vw !important;
   }
-
 }
-
-
 
 .row {
   justify-content: center;
 }
 
-
 .lead {
   display: flex;
   justify-content: center;
 }
-

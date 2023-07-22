@@ -5,6 +5,26 @@ from forms import ContactForm
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import random
+import logging
+
+logger = logging.getLogger("weddingsite")
+formatter = logging.Formatter(
+    f"%(asctime)s - %(name)s - %(levelname)s - %(message)s", "%m/%d/%Y %I:%M:%S %p"
+)
+logger.setLevel(logging.DEBUG)
+
+file_handler = logging.FileHandler("logs.log")
+file_handler.setLevel(logging.INFO)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+# logging.basicConfig(
+#     filename="logs.log",
+#     level=logging.INFO,
+#     disable_existing_loggers=True,
+#     format=f"%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+#     datefmt="%m/%d/%Y %I:%M:%S %p",
+# )
 
 
 load_dotenv()
@@ -26,11 +46,14 @@ mail.init_app(app)
 
 @app.route("/")
 def index():
+    ipaddr = request.environ.get("do-connecting-ip", request.remote_addr)
+    logger.info(f"/homepage : {ipaddr}")
     return render_template("index.html")
 
 
 @app.route("/rsvp", methods=["GET", "POST"])
 def rsvp():
+    ipaddr = request.environ.get("do-connecting-ip", request.remote_addr)
     form = ContactForm()
     if request.method == "POST":
         if form.validate() == False:
@@ -45,18 +68,23 @@ def rsvp():
             )
 
             mail.send(msg)
+            logger.info(f"formsubmit : {ipaddr}")
             if form.rsvp.data == "No":
                 return redirect("livestream")
 
             else:
+                logger.info(f"formsubmit : {ipaddr}")
                 return redirect("thanks")
 
     elif request.method == "GET":
+        logger.info(f"/rsvp : {ipaddr}")
         return render_template("rsvp.html", form=form)
 
 
 @app.route("/info")
 def info():
+    ipaddr = request.environ.get("HTTP_X_REAL_IP", request.remote_addr)
+    logger.info(f"/info : {ipaddr}")
     return render_template("info.html")
 
 
@@ -72,6 +100,8 @@ def livestream():
 
 @app.route("/gallery")
 def gallery():
+    ipaddr = request.environ.get("HTTP_X_REAL_IP", request.remote_addr)
+    logger.info(f"/gallery : {ipaddr}")
     photo_dir = os.path.dirname("static/images")
     photo_count = len(
         [
