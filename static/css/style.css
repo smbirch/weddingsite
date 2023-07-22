@@ -48,6 +48,11 @@ li {
   transform: translateX(-50%);
 }
 
+.bottombar {
+  position: fixed;
+  bottom: 10px;
+}
+
 .thanks {
   justify-content: center;
   align-items: center;
@@ -408,6 +413,20 @@ col-4 {
 
   .subtitle {
     font-size: 5vw !important;
+  }
+
+  .buttonhome {
+    position: fixed;
+    left: 30%;
+    bottom: 10px;
+    transform: translateX(-50%);
+  }
+
+  .buttonhomeright {
+    position: fixed;
+    right: 10%;
+    bottom: 10px;
+    transform: translateX(-50%);
   }
 }
 

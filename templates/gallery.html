@@ -1,34 +1,67 @@
-{% extends 'base.html' %} {% block content %}
-<div class="row justify-content-center deco-gallery">
-  <div class="col-md-12">
-    <div class="deco-gallery">
-      <div class="row">
-        {% for i in random_photos %}
-        <div class="col-md-4 d-flex align-items-center justify-content-center">
-          <img
-            src="{{ url_for('static', filename='images/image' ~ i ~ '.jpg') }}"
-            class="img-fluid gallery-photo"
-            alt="Photo {{ i }}"
-          />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link href="../static/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body class="vignette fade-in-text">
+    <div class="container my-auto decohelp">
+      <div class="deco">
+        <div class="row justify-content-center deco-gallery">
+          <div class="col-md-12">
+            <div class="deco-gallery">
+              <div class="row">
+                {% for i in random_photos %}
+                <div
+                  class="col-md-4 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="{{ url_for('static', filename='images/image' ~ i ~ '.jpg') }}"
+                    class="img-fluid gallery-photo"
+                    alt="Photo {{ i }}"
+                  />
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
         </div>
-        {% endfor %}
       </div>
+      <div class="col bottombar">
+        <a
+          class="btn btnpad bottompad"
+          href="{{ url_for('index')}}"
+          role="button"
+          >Home</a
+        >
+
+        <a class="btn bottompad" href="{{ url_for('gallery')}}" role="button"
+          >See More</a
+        >
+      </div>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+      ></script>
     </div>
-  </div>
-</div>
-
-<a
-  class="btn btnpad buttonhome bottompad"
-  href="{{ url_for('index')}}"
-  role="button"
-  >Home</a
->
-
-<a
-  class="btn buttonhomeright bottompad"
-  href="{{ url_for('gallery')}}"
-  role="button"
-  >See More</a
->
-
-{% endblock %}
+  </body>
+</html>
